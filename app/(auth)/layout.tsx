@@ -1,10 +1,10 @@
 import React from "react";
-import Appbar from "./Appbar";
+import DiscountBar from "./DiscountBar";
 
 export default function ({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <Appbar />
+      <DiscountBar />
       {children}
     </div>
   )
