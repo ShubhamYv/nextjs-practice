@@ -5,7 +5,6 @@ const SignIn = () => {
         <h2 className="text-3xl font-semibold text-center text-white mb-6">
           Sign in
         </h2>
-
         <form className="space-y-6">
           <div className="flex flex-col w-full">
             <label className="text-gray-300">Email:</label>

@@ -8,4 +8,4 @@ export default function ({ children }: { children: React.ReactNode }) {
       {children}
     </div>
   )
-}
+} 
