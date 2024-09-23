@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const SignInComponent = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -25,14 +27,8 @@ const SignInComponent = () => {
               required
             />
           </div>
-
           <div className="flex justify-center">
-            <button
-              type="submit"
-              className="w-full py-3 px-4 text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500"
-            >
-              Sign In
-            </button>
+            <Button buttonName="Sign In" />
           </div>
         </form>
 
