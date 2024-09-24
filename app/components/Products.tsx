@@ -6,7 +6,6 @@ const getProducts = async () => {
 };
 
 const ProductCard = async () => {
-  const shimmerItems = Array(8).fill(0);
   let products = [];
 
   try {

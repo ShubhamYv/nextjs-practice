@@ -1,9 +1,9 @@
-import ProductsComponents from "../components/Products"
+import ProductCard from "@/app/components/Products"
 
 const Products = () => {
   return (
     <div>
-      <ProductsComponents />
+      <ProductCard />
     </div>
   )
 }

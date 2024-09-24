@@ -1,4 +1,4 @@
-import DiscountBarComponent from "../components/DiscountBar";
+import DiscountBarComponent from "@/app/components/DiscountBar";
 
 const DiscountBar = () => {
   return (
