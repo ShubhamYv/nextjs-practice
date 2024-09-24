@@ -5,7 +5,6 @@ import React from "react";
 const Button = ({ buttonName }: { buttonName: string }) => {
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log(`${buttonName} button clicked`);
   };
 
   return (

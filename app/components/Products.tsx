@@ -1,17 +1,24 @@
 import axios from "axios";
 
 const getProducts = async () => {
-  const response = await axios.get('https://fakestoreapi.com/products');
-  return response.data;
+  try {
+    const response = await axios.get('http://localhost:3000/api/product');
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching products from API", error);
+    throw new Error("Failed to load products");
+  }
 };
 
 const ProductCard = async () => {
   let products = [];
+  let error = null;
 
   try {
     products = await getProducts();
-  } catch (error) {
-    console.error("Error fetching products", error);
+  } catch (err) {
+    console.error("Error fetching products", err);
+    error = "Failed to load products.";
   }
 
   return (
@@ -21,7 +28,9 @@ const ProductCard = async () => {
       </h1>
       <div className="min-h-screen bg-gray-900 flex items-center justify-center overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {
+          {error ? (
+            <p className="text-red-500">{error}</p>
+          ) : (
             products.map((product: any) => (
               <div
                 key={product.id}
@@ -43,7 +52,7 @@ const ProductCard = async () => {
                 </p>
               </div>
             ))
-          }
+          )}
         </div>
       </div>
     </>
