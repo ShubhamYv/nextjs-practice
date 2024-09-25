@@ -2,15 +2,11 @@
 
 import React from "react";
 
-const Button = ({ buttonName }: { buttonName: string }) => {
-  const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-  };
-
+const Button = ({ buttonName, onClick }: { buttonName: string; onClick: () => void }) => {
   return (
     <button
-      type="submit"
-      onClick={handleSubmit}
+      type="button"
+      onClick={onClick}
       className="w-full py-3 px-4 text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500"
     >
       {buttonName}
